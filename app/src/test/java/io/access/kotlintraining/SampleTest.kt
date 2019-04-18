@@ -3,7 +3,7 @@ package io.access.kotlintraining
 import org.junit.Test
 import kotlin.test.assertEquals
 
-class SampleTest {
+class SampleTest {/*
     @Test
     fun testWelcome() {
         welcome()
@@ -49,5 +49,57 @@ class SampleTest {
         assertEquals(power(2, 10), 1024)
         assertEquals(power(3, 5), 243)
         assertEquals(power(4, 3), 64)
+    }
+
+    @Test
+    fun testExtendedInt() {
+        val a = 5
+        assertEquals(a.isOdd(), true)
+        assertEquals(a.isEven(), false)
+    }
+
+    @Test
+    fun testDice() {
+        val d = Dice(16)
+
+        for (i in 1..100) {
+            assert(d.roll() in 1..16)
+        }
+
+        try {
+            println(d.roll())
+        } catch (e: Throwable) {
+            println(e.message)
+        }
+    }
+
+    @Test
+    fun testMyCustomClass() {
+        val p = MyCustomClass()
+        p.propertyWithCounter = 123
+        p.propertyWithCounter = 456
+        p.propertyWithCounter = 789
+        assertEquals(p.counter, 3)
+    }
+
+    @Test
+    fun testNabeAtsu() {
+        val n = NabeAtsu()
+        for (i in 1..100) {
+            println(n.next())
+        }
+    }*/
+
+    @Test
+    fun testSendMessageToClient() {
+        val m = GMailer()
+
+        val c1 = Client(PersonalInfo("John"))
+
+        sendMessageToClient(c1, "hello", m)
+
+        val c2 = Client(PersonalInfo())
+
+        sendMessageToClient(c2, null, m)
     }
 }
