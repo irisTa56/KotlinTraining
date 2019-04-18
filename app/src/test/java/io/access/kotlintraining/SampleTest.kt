@@ -7,6 +7,7 @@ class SampleTest {
     @Test
     fun testWelcome() {
         welcome()
+        hello()
 
         // Example of test
         val expected = 1
